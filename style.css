@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
+    background-position: center;
+    background-size: center;
+}
+.navbar{
+    width: 90%;
+    padding: 30px;
+    padding-left: 360px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 160px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+}
+li a:hover{
+    background: white;
+    transition: 0.6s;
+}
+.navbar a:hover{
+    color: black;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    color: white;
+    top: 45%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.content h1{
+    margin-top: 80px;
+    font-size: 90px;
+    font-weight: 800;
+}
+button{
+    width: 200px;
+    padding: 15px;
+    margin: 20px 5px;
+    text-align: center;
+    border-radius: 25px;
+    color: black;
+    border: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+button:hover{
+    background: rgb(0, 192, 226);
+    transition: 0.5s;
+}
+button:hover{
+    color: white;
+}
+.banner video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+    .banner video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.about{
+    width: 100%;
+    /*padding-left: 50px;
+    padding-right: 50px;*/
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+}
+.about h1{
+    padding-bottom: 20px;
+}
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 20px; /* Space inside the element */
+    margin: 30px auto; /* Center the element horizontally */
+    max-width: 90%; /* Limit the maximum width for better responsiveness */
+    width: 80%; /* Initial width */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.skills{
+    width: 80%;
+    padding-top: 10px;
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 20px;
+}
+.skill-name{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    margin : 30px 0;
+    padding-right: 108.5px;
+}
+
+.skill-bar{
+    height: 14px;
+    width: 1000px;
+    background: #2c4357;
+    border-radius: 10px;
+    animation: fillbars 2.5s 1;
+
+}
+.skill-per{
+    height:14px;
+    background: #04f3e7;
+    border-radius: 3px;
+    position: relative;
+}
+
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #000000;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.skill-per::after{
+    content:"";
+    position:absolute;
+    width: 10px;
+    height: 10px;
+    background: #000000;
+    top: -20px;
+    right: 0;
+    transform: translate(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+@keyframes fillBars{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.Projects{
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    font-style: Bold;
+}
+
+/*Scroll animation*/
+#box{
+    animation-name: slidedown;
+    animation-duration: 0.5s;
+}
+@keyframes slidedown{
+    from{transform: translateY(-100px)}
+}
+
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+
+}
+
+.container{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0s;
+    
+}
+
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.container:nth-child(1){
+    animation-delay: 0s;
+}
+
+.container:nth-child(2){
+    animation-delay: 1s;
+}
+
+.container:nth-child(3){
+    animation-delay: 2s;
+}
+
+
+.text-box{
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.left-container{
+    right: 1%;
+}
+
+.right-container{
+    left: 51%;
+}
+
+.container img{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+
+}
+
+.right-container img{
+    left: -20px;
+}
+
+.timeline::after{
+    content:'';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #79a6d2;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    animation:moveline 3s linear forwards;
+    z-index : -1;
+}
+
+
+
+@keyframes moveline{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.text-box h2{
+    font-weight: 600;
+}
+
+.text-box small{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.background-container {
+    width: 100%;
+    height: 500vh; /* Full viewport height */
+    background-image: url('blue1.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    z-index: -3;
+}
+
+.TH{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-style: Bold;
+}
+
+.project-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.project-container img {
+    margin-right: 15px;
+    max-width: 450px; /* Adjust the size of the image as needed */
+    height: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-image:hover {
+    transform: scale(1.05); /* Scale image slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
